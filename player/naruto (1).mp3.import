@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8w0y2d1c01sj"
+path="res://.godot/imported/naruto (1).mp3-9c361d56e99fc125c3aeebedb44824c3.mp3str"
+
+[deps]
+
+source_file="res://player/naruto (1).mp3"
+dest_files=["res://.godot/imported/naruto (1).mp3-9c361d56e99fc125c3aeebedb44824c3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

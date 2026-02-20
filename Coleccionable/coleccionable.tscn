@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://c58mfr53rhw1e"]
+
+[ext_resource type="Texture2D" uid="uid://p7aonf62okdh" path="res://Coleccionable/img/Bronze_1.png" id="1_noi7n"]
+[ext_resource type="Script" uid="uid://dd6rc4w345xnr" path="res://Coleccionable/coleccionable.gd" id="1_u27u5"]
+[ext_resource type="Texture2D" uid="uid://qyxrn7gyhewj" path="res://Coleccionable/img/Bronze_2.png" id="2_u27u5"]
+[ext_resource type="Texture2D" uid="uid://chpy8o5m1irwj" path="res://Coleccionable/img/Bronze_3.png" id="3_ax6rk"]
+[ext_resource type="Texture2D" uid="uid://bld5j2qpqecbe" path="res://Coleccionable/img/Bronze_4.png" id="4_cb6yq"]
+[ext_resource type="Texture2D" uid="uid://doe4pkb8siwbx" path="res://Coleccionable/img/Bronze_5.png" id="5_dybuf"]
+[ext_resource type="Texture2D" uid="uid://80h8sr8bwhrd" path="res://Coleccionable/img/Bronze_6.png" id="6_l7yll"]
+[ext_resource type="Texture2D" uid="uid://x1luovg7vl4s" path="res://Coleccionable/img/Bronze_7.png" id="7_qp27h"]
+[ext_resource type="Texture2D" uid="uid://cgdn06418s8oc" path="res://Coleccionable/img/Bronze_8.png" id="8_llmx1"]
+[ext_resource type="Texture2D" uid="uid://dlhvhjtss7x27" path="res://Coleccionable/img/Bronze_9.png" id="9_dftqi"]
+[ext_resource type="Texture2D" uid="uid://dbsh1gwvtcx44" path="res://Coleccionable/img/Bronze_10.png" id="10_37fpn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtv8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_noi7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u27u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ax6rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cb6yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dybuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l7yll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qp27h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_llmx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dftqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_37fpn")
+}],
+"loop": true,
+"name": &"moneda",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iddue"]
+radius = 29.15476
+
+[node name="coleccionable" type="Area2D" unique_id=1736797971]
+position = Vector2(707, 588)
+script = ExtResource("1_u27u5")
+
+[node name="ani_moneda" type="AnimatedSprite2D" parent="." unique_id=1971196688]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_gtv8p")
+animation = &"moneda"
+frame_progress = 0.84241307
+
+[node name="col_moneda" type="CollisionShape2D" parent="." unique_id=2095278388]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_iddue")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

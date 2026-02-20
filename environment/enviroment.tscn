@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://btyvr3rypc4qe"]
+
+[ext_resource type="PackedScene" uid="uid://kmxghmjmqqce" path="res://fondo/fondo.tscn" id="1_mjgx3"]
+[ext_resource type="PackedScene" uid="uid://bcskntjohpd1p" path="res://player/player.tscn" id="1_xvbcy"]
+[ext_resource type="PackedScene" uid="uid://b8g3fv7jufpd3" path="res://floor/floor.tscn" id="2_mjgx3"]
+[ext_resource type="PackedScene" uid="uid://c58mfr53rhw1e" path="res://Coleccionable/coleccionable.tscn" id="4_m888k"]
+[ext_resource type="PackedScene" uid="uid://goyvdp4cq4bi" path="res://cactus/cactus.tscn" id="5_nu1tg"]
+[ext_resource type="PackedScene" uid="uid://duobaf2jhr12x" path="res://ene_dyn/ene_dyn_zombie.tscn" id="6_4jso8"]
+
+[node name="enviroment" type="Node2D" unique_id=1577144749]
+z_index = -1
+position = Vector2(2, -4)
+
+[node name="Floor" parent="." unique_id=1891672826 instance=ExtResource("2_mjgx3")]
+z_index = 1
+layer_0/y_sort_enabled = true
+
+[node name="Player" parent="." unique_id=900541778 instance=ExtResource("1_xvbcy")]
+z_index = 2
+position = Vector2(23, 18)
+
+[node name="fondo" parent="." unique_id=1738408061 instance=ExtResource("1_mjgx3")]
+
+[node name="cactus" parent="." unique_id=662207360 instance=ExtResource("5_nu1tg")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(40, -23)
+collision_priority = 2.0
+
+[node name="ene_dyn_zombie" parent="." unique_id=1577931280 instance=ExtResource("6_4jso8")]
+z_index = 2
+position = Vector2(468, 36)
+
+[node name="moneda2" parent="." unique_id=1829678297 instance=ExtResource("4_m888k")]
+z_index = 4
+position = Vector2(1109, 593)
+
+[node name="moneda1" parent="." unique_id=1736797971 instance=ExtResource("4_m888k")]
+z_index = 4
+position = Vector2(576, 596)
